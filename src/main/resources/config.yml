@@ -467,6 +467,6 @@ Player:
   DisplayName: "&d&l%killed%"
 
 Message:
-  Reload: "&9&l斩首插件&6&l >> &a插件重载成功!"
-  DropMobHead: "&9&l斩首插件&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a的头颅!"
-  DropPlayerHead: "&9&l斩首插件&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a的头颅!"
+  Reload: "&9&l樱花斩首&6&l >> &a插件重载成功!"
+  DropMobHead: "&9&l樱花斩首&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a的头颅!"
+  DropPlayerHead: "&9&l樱花斩首&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a的头颅!"
