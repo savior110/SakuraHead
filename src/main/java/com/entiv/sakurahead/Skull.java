@@ -56,8 +56,6 @@ class Skull {
         NBTListCompound texture = skull.addCompound("Properties").getCompoundList("textures").addCompound();
         texture.setString("Value", texturesValue);
 
-        nbtItem.setString("Type", "test");
-
         ItemStack itemStack = nbtItem.getItem();
 
         return new ItemBuilder(itemStack).name(displayName).lore(lore).build();
