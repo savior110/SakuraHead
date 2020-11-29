@@ -43,7 +43,8 @@ public class Message {
 
         if (message == null || message.length == 0) return;
 
-        sendConsole(toColor(message));
+        ConsoleCommandSender consoleSender = Bukkit.getConsoleSender();
+        consoleSender.sendMessage(toColor(message));
     }
 
     public static void sendConsole(List<String> message) {
