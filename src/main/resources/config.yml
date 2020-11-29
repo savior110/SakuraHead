@@ -8,7 +8,7 @@ SkullType:
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
-    # 头颅的 base64 地址, 可在 https://minecraft-heads.com/ 上挑选自己喜欢颅
+    # 头颅的 base64 地址, 可在 https://minecraft-heads.com/ 上挑选自己喜欢的头颅
     Value: "eyJ0aW1lc3RhbXAiOjE0ODEwNDM0MzQyNTIsInByb2ZpbGVJZCI6IjNjOWE4MjkyMGZhNzRlN2M4NDEzMmJjYjE1OTY4MjA0IiwicHJvZmlsZU5hbWUiOiJSb2NvbG9nbyIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBjNTZjOTNlY2Q0MmFiNWQ1MTkyNDUyOGU1YTFjYjdiMWE4YmQ1N2I0NDM1ZmY5MmQxNTJkODRkNDNjN2E0ZCJ9fX0="
 
   BLAZE:
