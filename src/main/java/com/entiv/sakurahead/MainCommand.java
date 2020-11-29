@@ -17,7 +17,6 @@ public class MainCommand implements CommandExecutor {
             String message = plugin.getConfig().getString("Message.".concat("Reload"));
             Message.send(sender, message);
         }
-        System.out.println("123");
         return true;
     }
 }
