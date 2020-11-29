@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.UUID;
 
 class Skull {
+
+    String type;
     final String displayName;
 
     final String texturesValue;
@@ -26,12 +28,14 @@ class Skull {
 
     private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    Skull(double change, String displayName, List<String> lore, String texturesValue) {
+    Skull(double change, String type, List<String> lore, String texturesValue) {
 
         lore.replaceAll(s -> s.replace("%time%", simpleDateFormat.format(this.data)));
 
         this.lore = lore;
-        this.displayName = Message.toColor(displayName + "的头");
+        this.type = type;
+
+        this.displayName = Message.toColor(type + "的头");
         this.texturesValue = texturesValue;
         this.change = change;
     }
@@ -46,7 +50,7 @@ class Skull {
         NBTItem nbtItem = new NBTItem(head);
 
         NBTCompound skull = nbtItem.addCompound("SkullOwner");
-        skull.setString("Name", Message.withoutColor(displayName));
+        skull.setString("Name", type);
         skull.setString("Id", String.valueOf(UUID.randomUUID()));
 
         NBTListCompound texture = skull.addCompound("Properties").getCompoundList("textures").addCompound();

@@ -46,7 +46,7 @@ public class EntityListener implements Listener {
 
             String dropMobHead = plugin.getConfig().getString("Message.DropMobHead");
 
-            plugin.getServer().broadcastMessage(Message.toColor(Message.replace(dropMobHead, "%player%", killer.getName(), "%target%", Message.withoutColor(entitySkull.displayName))));
+            plugin.getServer().broadcastMessage(Message.toColor(Message.replace(dropMobHead, "%player%", killer.getName(), "%target%", Message.withoutColor(entitySkull.type))));
         }
     }
 
