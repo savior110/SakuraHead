@@ -3,17 +3,17 @@ SkullType:
     # 设为 1 就是 100% 0.1 就是 10%
     Change: 0.001
     # 怪物的名字
-    DisplayName: "&d&l蝙蝠的头"
+    DisplayName: "&d&l蝙蝠"
     # 头颅 lore 可删除
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
-    # 头颅的 base64 地址, 可在 https://minecraft-heads.com/ 上挑选自己喜欢的头颅
+    # 头颅的 base64 地址, 可在 https://minecraft-heads.com/ 上挑选自己喜欢颅
     Value: "eyJ0aW1lc3RhbXAiOjE0ODEwNDM0MzQyNTIsInByb2ZpbGVJZCI6IjNjOWE4MjkyMGZhNzRlN2M4NDEzMmJjYjE1OTY4MjA0IiwicHJvZmlsZU5hbWUiOiJSb2NvbG9nbyIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBjNTZjOTNlY2Q0MmFiNWQ1MTkyNDUyOGU1YTFjYjdiMWE4YmQ1N2I0NDM1ZmY5MmQxNTJkODRkNDNjN2E0ZCJ9fX0="
 
   BLAZE:
     Change: 0.001
-    DisplayName: "&d&l烈焰人的头"
+    DisplayName: "&d&l烈焰人"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -21,7 +21,7 @@ SkullType:
 
   CAVE_SPIDER:
     Change: 0.001
-    DisplayName: "&d&l洞穴蜘蛛的头"
+    DisplayName: "&d&l洞穴蜘蛛"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -29,7 +29,7 @@ SkullType:
 
   CHICKEN:
     Change: 0.001
-    DisplayName: "&d&l鸡的头"
+    DisplayName: "&d&l鸡"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -37,7 +37,7 @@ SkullType:
 
   COW:
     Change: 0.001
-    DisplayName: "&d&l牛的头"
+    DisplayName: "&d&l牛"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -45,7 +45,7 @@ SkullType:
 
   CREEPER:
     Change: 0.001
-    DisplayName: "&d&l爬行者的头"
+    DisplayName: "&d&l爬行者"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -53,7 +53,7 @@ SkullType:
 
   DONKEY:
     Change: 0.001
-    DisplayName: "&d&l驴的头"
+    DisplayName: "&d&l驴"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -62,7 +62,7 @@ SkullType:
 
   ELDER_GUARDIAN:
     Change: 0.001
-    DisplayName: "&d&l远古守卫者的头"
+    DisplayName: "&d&l远古守卫者"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -70,7 +70,7 @@ SkullType:
 
   ENDERMAN:
     Change: 0.001
-    DisplayName: "&d&l末影人的头"
+    DisplayName: "&d&l末影人"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -78,7 +78,7 @@ SkullType:
 
   ENDERMITE:
     Change: 0.001
-    DisplayName: "&d&l末影螨的头"
+    DisplayName: "&d&l末影螨"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -86,7 +86,7 @@ SkullType:
 
   ENDER_DRAGON:
     Change: 0.001
-    DisplayName: "&d&l末影龙的头"
+    DisplayName: "&d&l末影龙"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -94,7 +94,7 @@ SkullType:
 
   EVOKER:
     Change: 0.001
-    DisplayName: "&d&l唤魔者的头"
+    DisplayName: "&d&l唤魔者"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -102,7 +102,7 @@ SkullType:
 
   GHAST:
     Change: 0.001
-    DisplayName: "&d&l恶魂的头"
+    DisplayName: "&d&l恶魂"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -110,7 +110,7 @@ SkullType:
 
   GIANT:
     Change: 0.001
-    DisplayName: "&d&l巨人的头"
+    DisplayName: "&d&l巨人"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -118,7 +118,7 @@ SkullType:
 
   GUARDIAN:
     Change: 0.001
-    DisplayName: "&d&l守卫者的头"
+    DisplayName: "&d&l守卫者"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -126,7 +126,7 @@ SkullType:
 
   HORSE:
     Change: 0.001
-    DisplayName: "&d&l马的头"
+    DisplayName: "&d&l马"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -134,7 +134,7 @@ SkullType:
 
   HUSK:
     Change: 0.001
-    DisplayName: "&d&l尸壳的头"
+    DisplayName: "&d&l尸壳"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -142,7 +142,7 @@ SkullType:
 
   ILLUSIONER:
     Change: 0.001
-    DisplayName: "&d&l幻术师的头"
+    DisplayName: "&d&l幻术师"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -150,7 +150,7 @@ SkullType:
 
   IRON_GOLEM:
     Change: 0.001
-    DisplayName: "&d&l铁傀儡的头"
+    DisplayName: "&d&l铁傀儡"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -158,7 +158,7 @@ SkullType:
 
   LLAMA:
     Change: 0.001
-    DisplayName: "&d&l羊驼的头"
+    DisplayName: "&d&l羊驼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -166,7 +166,7 @@ SkullType:
 
   MAGMA_CUBE:
     Change: 0.001
-    DisplayName: "&d&l岩浆怪的头"
+    DisplayName: "&d&l岩浆怪"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -174,7 +174,7 @@ SkullType:
 
   MULE:
     Change: 0.001
-    DisplayName: "&d&l骡的头"
+    DisplayName: "&d&l骡"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -182,7 +182,7 @@ SkullType:
 
   MUSHROOM_COW:
     Change: 0.001
-    DisplayName: "&d&l哞菇的头"
+    DisplayName: "&d&l哞菇"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -190,7 +190,7 @@ SkullType:
 
   OCELOT:
     Change: 0.001
-    DisplayName: "&d&l豹猫的头"
+    DisplayName: "&d&l豹猫"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -199,7 +199,7 @@ SkullType:
 
   PARROT:
     Change: 0.001
-    DisplayName: "&d&l鹦鹉的头"
+    DisplayName: "&d&l鹦鹉"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -207,7 +207,7 @@ SkullType:
 
   PIG:
     Change: 0.001
-    DisplayName: "&d&l猪的头"
+    DisplayName: "&d&l猪"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -215,7 +215,7 @@ SkullType:
 
   PIG_ZOMBIE:
     Change: 0.001
-    DisplayName: "&d&l僵尸猪人的头"
+    DisplayName: "&d&l僵尸猪人"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -223,7 +223,7 @@ SkullType:
 
   POLAR_BEAR:
     Change: 0.001
-    DisplayName: "&d&l北极熊的头"
+    DisplayName: "&d&l北极熊"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -231,7 +231,7 @@ SkullType:
 
   RABBIT:
     Change: 0.001
-    DisplayName: "&d&l兔子的头"
+    DisplayName: "&d&l兔子"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -239,7 +239,7 @@ SkullType:
 
   SHEEP:
     Change: 0.001
-    DisplayName: "&d&l羊的头"
+    DisplayName: "&d&l羊"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -247,7 +247,7 @@ SkullType:
 
   SHULKER:
     Change: 0.001
-    DisplayName: "&d&l潜影贝的头"
+    DisplayName: "&d&l潜影贝"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -256,7 +256,7 @@ SkullType:
 
   SILVERFISH:
     Change: 0.001
-    DisplayName: "&d&l蠹虫的头"
+    DisplayName: "&d&l蠹虫"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -264,7 +264,7 @@ SkullType:
 
   SKELETON:
     Change: 0.001
-    DisplayName: "&d&l骷髅的头"
+    DisplayName: "&d&l骷髅"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -272,7 +272,7 @@ SkullType:
 
   SKELETON_HORSE:
     Change: 0.001
-    DisplayName: "&d&l骷髅马的头"
+    DisplayName: "&d&l骷髅马"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -280,7 +280,7 @@ SkullType:
 
   SLIME:
     Change: 0.001
-    DisplayName: "&d&l史莱姆的头"
+    DisplayName: "&d&l史莱姆"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -288,7 +288,7 @@ SkullType:
 
   SNOWMAN:
     Change: 0.001
-    DisplayName: "&d&l雪傀儡的头"
+    DisplayName: "&d&l雪傀儡"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -296,7 +296,7 @@ SkullType:
 
   SPIDER:
     Change: 0.001
-    DisplayName: "&d&l蜘蛛的头"
+    DisplayName: "&d&l蜘蛛"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -304,7 +304,7 @@ SkullType:
 
   SQUID:
     Change: 0.001
-    DisplayName: "&d&l鱿鱼的头"
+    DisplayName: "&d&l鱿鱼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -312,7 +312,7 @@ SkullType:
 
   STRAY:
     Change: 0.001
-    DisplayName: "&d&l流髑的头"
+    DisplayName: "&d&l流髑"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -320,7 +320,7 @@ SkullType:
 
   VEX:
     Change: 0.001
-    DisplayName: "&d&l恼鬼的头"
+    DisplayName: "&d&l恼鬼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -328,7 +328,7 @@ SkullType:
 
   VILLAGER:
     Change: 0.001
-    DisplayName: "&d&l村民的头"
+    DisplayName: "&d&l村民"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -336,7 +336,7 @@ SkullType:
 
   VINDICATOR:
     Change: 0.001
-    DisplayName: "&d&l卫道士的头"
+    DisplayName: "&d&l卫道士"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -344,7 +344,7 @@ SkullType:
 
   WITCH:
     Change: 0.001
-    DisplayName: "&d&l女巫的头"
+    DisplayName: "&d&l女巫"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -352,7 +352,7 @@ SkullType:
 
   WITHER:
     Change: 0.001
-    DisplayName: "&d&l凋灵的头"
+    DisplayName: "&d&l凋灵"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -360,7 +360,7 @@ SkullType:
 
   WITHER_SKELETON:
     Change: 0.001
-    DisplayName: "&d&l凋灵骷髅的头"
+    DisplayName: "&d&l凋灵骷髅"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -368,7 +368,7 @@ SkullType:
 
   WOLF:
     Change: 0.001
-    DisplayName: "&d&l狼的头"
+    DisplayName: "&d&l狼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -376,7 +376,7 @@ SkullType:
 
   ZOMBIE:
     Change: 0.001
-    DisplayName: "&d&l僵尸的头"
+    DisplayName: "&d&l僵尸"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -384,7 +384,7 @@ SkullType:
 
   ZOMBIE_HORSE:
     Change: 0.001
-    DisplayName: "&d&l僵尸马的头"
+    DisplayName: "&d&l僵尸马"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -392,7 +392,7 @@ SkullType:
 
   ZOMBIE_VILLAGER:
     Change: 0.001
-    DisplayName: "&d&l僵尸村民的头"
+    DisplayName: "&d&l僵尸村民"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -400,7 +400,7 @@ SkullType:
 
   DROWNED:
     Change: 0.001
-    DisplayName: "&d&l溺尸的头"
+    DisplayName: "&d&l溺尸"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -408,7 +408,7 @@ SkullType:
 
   PHANTOM:
     Change: 0.001
-    DisplayName: "&d&l幻翼的头"
+    DisplayName: "&d&l幻翼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -416,7 +416,7 @@ SkullType:
 
   DOLPHIN:
     Change: 0.001
-    DisplayName: "&d&l海豚的头"
+    DisplayName: "&d&l海豚"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -424,7 +424,7 @@ SkullType:
 
   TURTLE:
     Change: 0.001
-    DisplayName: "&d&l海龟的头"
+    DisplayName: "&d&l海龟"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -432,7 +432,7 @@ SkullType:
 
   TROPICAL_FISH:
     Change: 0.001
-    DisplayName: "&d&l热带鱼的头"
+    DisplayName: "&d&l热带鱼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -440,7 +440,7 @@ SkullType:
 
   PUFFERFISH:
     Change: 0.001
-    DisplayName: "&d&l河豚的头"
+    DisplayName: "&d&l河豚"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -448,7 +448,7 @@ SkullType:
 
   COD:
     Change: 0.001
-    DisplayName: "&d&l鳕鱼的头"
+    DisplayName: "&d&l鳕鱼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -456,7 +456,7 @@ SkullType:
 
   SALMON:
     Change: 0.001
-    DisplayName: "&d&l鲑鱼的头"
+    DisplayName: "&d&l鲑鱼"
     Lore:
       - ""
       - "&7斩首时间:&e&l %time%"
@@ -464,9 +464,9 @@ SkullType:
 
 Player:
   Change: 0.001
-  DisplayName: "&d&l%killed%的头"
+  DisplayName: "&d&l%killed%"
 
 Message:
   Reload: "&9&l斩首插件&6&l >> &a插件重载成功!"
-  DropMobHead: "&9&l斩首插件&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a的头颅!"
-  DropPlayerHead: "&9&l斩首插件&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a的头颅!"
+  DropMobHead: "&9&l斩首插件&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a颅!"
+  DropPlayerHead: "&9&l斩首插件&6&l >> &a玩家&e&l %player% &a斩首了&e&l %target% &a颅!"

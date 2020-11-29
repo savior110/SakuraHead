@@ -31,7 +31,7 @@ class Skull {
         lore.replaceAll(s -> s.replace("%time%", simpleDateFormat.format(this.data)));
 
         this.lore = lore;
-        this.displayName = Message.toColor(displayName);
+        this.displayName = Message.toColor(displayName + "的头");
         this.texturesValue = texturesValue;
         this.change = change;
     }
