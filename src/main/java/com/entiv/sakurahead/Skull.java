@@ -50,7 +50,6 @@ class Skull {
         NBTItem nbtItem = new NBTItem(head);
 
         NBTCompound skull = nbtItem.addCompound("SkullOwner");
-        skull.setString("Name", type);
         skull.setString("Id", String.valueOf(UUID.randomUUID()));
 
         NBTListCompound texture = skull.addCompound("Properties").getCompoundList("textures").addCompound();

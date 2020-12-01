@@ -59,35 +59,38 @@ public class EntityListener implements Listener {
 
         for (ItemStack itemStack : drops) {
 
-            if (itemStack.getType().equals(Material.PLAYER_HEAD)) {
+            if (!itemStack.getType().equals(Material.PLAYER_HEAD)) continue;
 
-                NBTItem nbtItem = new NBTItem(itemStack);
-                String value = nbtItem.getCompound("SkullOwner").getCompound("Properties").getCompoundList("textures").get(0).getString("Value");
+            NBTItem nbtItem = new NBTItem(itemStack);
+            String value = nbtItem.getCompound("SkullOwner").getCompound("Properties").getCompoundList("textures").get(0).getString("Value");
 
-                if (value == null) return;
+            if (value == null) continue;
 
-                ConfigurationSection section = plugin.getConfig().getConfigurationSection("SkullType");
-                if (section == null) return;
+            String entityName = getEntityName(value);
 
-                for (String entityName : section.getKeys(false)) {
+            if (entityName == null) return;
 
-                    String configValue = section.getString(entityName.concat(".Value"));
+            Skull skull = getSkull(EntityType.valueOf(entityName));
+            if (skull == null) return;
 
-                    if (value.equals(configValue)) {
+            event.setDropItems(false);
+            Location location = event.getBlock().getLocation();
 
-                        Skull skull = getSkull(EntityType.valueOf(entityName));
-                        if (skull == null) return;
-
-                        event.setDropItems(false);
-                        Location location = event.getBlock().getLocation();
-
-                        ItemStack skullItemStack = skull.getItemStack();
-                        location.getWorld().dropItem(location, skullItemStack);
-                        return;
-                    }
-                }
-            }
+            ItemStack skullItemStack = skull.getItemStack();
+            location.getWorld().dropItem(location, skullItemStack);
         }
+    }
+
+    private String getEntityName(String value) {
+        ConfigurationSection section = plugin.getConfig().getConfigurationSection("SkullType");
+        if (section == null) return null;
+
+        for (String entityName : section.getKeys(false)) {
+
+            String configValue = section.getString(entityName.concat(".Value"));
+            if (value.equals(configValue)) return entityName;
+        }
+        return null;
     }
 
     private void givePlayerSkull(Player killer, Player killed) {
@@ -107,12 +110,11 @@ public class EntityListener implements Listener {
 
     private Skull getSkull(EntityType entityType) {
 
-        ConfigurationSection skullType = plugin.getConfig().getConfigurationSection("SkullType");
+        ConfigurationSection skullType = getConfigurationSection();
 
-        if (skullType == null) {
-            String message = "§9§l" + plugin.getDescription().getName() + "§6§l >> §c生物§e§l " + entityType + "§c 不存在,请检查配置文件";
-            Message.sendConsole(message);
-            return null;
+        String name = entityType.name();
+        if (skullType.getString(name) == null) {
+            Message.sendConsole("&9&lSakuraHead &6&l>> &c生物" + name + "不存在, 请检查配置文件");
         }
 
         double change = skullType.getDouble(entityType + ".Change");
@@ -121,5 +123,13 @@ public class EntityListener implements Listener {
         String value = skullType.getString(entityType + ".Value");
 
         return new Skull(change, displayName, lore, value);
+    }
+
+    private ConfigurationSection getConfigurationSection() {
+        ConfigurationSection section = plugin.getConfig().getConfigurationSection("SkullType");
+        if (section == null) {
+            throw new NullPointerException("配置文件错误, 请检查配置文件");
+        }
+        return section;
     }
 }
