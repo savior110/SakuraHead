@@ -35,7 +35,7 @@ public class EntityListener implements Listener {
         if (killer == null || entityType == EntityType.ARMOR_STAND) return;
 
         double playerChange = plugin.getConfig().getDouble("Player.Change");
-        Skull entitySkull = getSkull(entityType);
+        Skull entitySkull = Main.getInstance().getSkull(entityType);
 
         if (entityType.equals(EntityType.PLAYER) && playerChange > Math.random()) {
 
@@ -72,7 +72,7 @@ public class EntityListener implements Listener {
 
             if (entityName == null) return;
 
-            Skull skull = getSkull(EntityType.valueOf(entityName));
+            Skull skull = Main.getInstance().getSkull(EntityType.valueOf(entityName));
 
             event.setDropItems(false);
             Location location = event.getBlock().getLocation();
@@ -109,28 +109,5 @@ public class EntityListener implements Listener {
         Message.sendAllPlayers(dropPlayerHead);
     }
 
-    private Skull getSkull(EntityType entityType) {
 
-        ConfigurationSection skullType = getConfigurationSection();
-
-        String name = entityType.name();
-        if (skullType.getString(name) == null) {
-            Message.sendConsole("&9&lSakuraHead &6&l>> &c生物" + name + "不存在, 请检查配置文件");
-        }
-
-        double change = skullType.getDouble(entityType + ".Change");
-        String displayName = skullType.getString(entityType + ".DisplayName");
-        List<String> lore = skullType.getStringList(entityType + ".Lore");
-        String value = skullType.getString(entityType + ".Value");
-
-        return new Skull(change, displayName, lore, value);
-    }
-
-    private ConfigurationSection getConfigurationSection() {
-        ConfigurationSection section = plugin.getConfig().getConfigurationSection("SkullType");
-        if (section == null) {
-            throw new NullPointerException("配置文件错误, 请检查配置文件");
-        }
-        return section;
-    }
 }

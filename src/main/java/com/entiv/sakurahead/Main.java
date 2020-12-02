@@ -2,7 +2,12 @@ package com.entiv.sakurahead;
 
 import com.entiv.sakurahead.utils.Message;
 import org.bukkit.Bukkit;
+import org.bukkit.command.PluginCommand;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.entity.EntityType;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.List;
 
 public class Main extends JavaPlugin {
 
@@ -24,7 +29,12 @@ public class Main extends JavaPlugin {
 
         saveDefaultConfig();
         Bukkit.getPluginManager().registerEvents(new EntityListener(), this);
-        Bukkit.getPluginCommand("SakuraHead").setExecutor(new MainCommand());
+        PluginCommand command = Bukkit.getPluginCommand("SakuraHead");
+
+        if (command != null) {
+            command.setExecutor(new MainCommand());
+            command.setTabCompleter(new MainCommand());
+        }
     }
 
     @Override
@@ -36,5 +46,28 @@ public class Main extends JavaPlugin {
         Message.sendConsole(message);
     }
 
+    public Skull getSkull(EntityType entityType) {
 
+        ConfigurationSection skullType = getConfigurationSection();
+
+        String name = entityType.name();
+        if (skullType.getString(name) == null) {
+            Message.sendConsole("&9&lSakuraHead &6&l>> &c生物" + name + "不存在, 请检查配置文件");
+        }
+
+        double change = skullType.getDouble(entityType + ".Change");
+        String displayName = skullType.getString(entityType + ".DisplayName");
+        List<String> lore = skullType.getStringList(entityType + ".Lore");
+        String value = skullType.getString(entityType + ".Value");
+
+        return new Skull(change, displayName, lore, value);
+    }
+
+    public ConfigurationSection getConfigurationSection() {
+        ConfigurationSection section = plugin.getConfig().getConfigurationSection("SkullType");
+        if (section == null) {
+            throw new NullPointerException("配置文件错误, 请检查配置文件");
+        }
+        return section;
+    }
 }
