@@ -462,6 +462,113 @@ SkullType:
       - "&7斩首时间:&e&l %time%"
     Value: "eyJ0aW1lc3RhbXAiOjE0ODYwMjM0NzU1NDksInByb2ZpbGVJZCI6IjNjOWE4MjkyMGZhNzRlN2M4NDEzMmJjYjE1OTY4MjA0IiwicHJvZmlsZU5hbWUiOiJSb2NvbG9nbyIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjAxMmNjZThkNTZlNDRmNzZkOTJiNDg4NThlNTgyYjk1YTQ1ZWU2NjRmYTYyNjBiYWIwOGMzMmU5ZTgxNCJ9fX0="
 
+  # 1.14
+  CAT:
+    Change: 0.001
+    DisplayName: "&d&l猫"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTM4OWUwZDVkM2U4MWY4NGI1NzBlMjk3ODI0NGIzYTczZTVhMjJiY2RiNjg3NGI0NGVmNWQwZjY2Y2EyNGVlYyJ9fX0="
+
+  FOX:
+    Change: 0.001
+    DisplayName: "&d&l狐狸"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0aW1lc3RhbXAiOjE1NTYyODM2Mjk0MTksInByb2ZpbGVJZCI6ImIwZDRiMjhiYzFkNzQ4ODlhZjBlODY2MWNlZTk2YWFiIiwicHJvZmlsZU5hbWUiOiJ4RmFpaUxlUiIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjAwYzQ2ZDIxZTY5ZGM5MTBhOWM1ODc4MjliY2JkYzEyNDc4NDJlZTdkNmQzZTQ5Y2M1Y2U2NTI5ZTI3MWI3ZSJ9fX0="
+
+  RAVAGER:
+    Change: 0.001
+    DisplayName: "&d&l劫掠兽"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0aW1lc3RhbXAiOjE1NTYyODQ3MTA1MjgsInByb2ZpbGVJZCI6IjgyYzYwNmM1YzY1MjRiNzk4YjkxYTEyZDNhNjE2OTc3IiwicHJvZmlsZU5hbWUiOiJOb3ROb3RvcmlvdXNOZW1vIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8zOTFmYjY0YTA1ODYwMGY1YTU3OWNmMTEzZDBkZDZjYTFjMDZkMjg0Mzg5ZDQzZGJmZjQ1NzNiMjkxM2IzNTE0In19fQ=="
+
+  PANDA:
+    Change: 0.001
+    DisplayName: "&d&l熊猫"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0aW1lc3RhbXAiOjE1NTYyODM3NjQyNDUsInByb2ZpbGVJZCI6IjkxZmUxOTY4N2M5MDQ2NTZhYTFmYzA1OTg2ZGQzZmU3IiwicHJvZmlsZU5hbWUiOiJoaGphYnJpcyIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjVkZWEzYTgyYjlmYWZjOGFmODllMjI5YzM1NzE5MzZjZjI2Njk2ZmEwYWViY2VlNTMwOWY4MTg4OTBmNjhmOCJ9fX0="
+
+  WANDERING_TRADER:
+    Change: 0.001
+    DisplayName: "&d&l流浪商人"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0aW1lc3RhbXAiOjE1Njg4MTc3OTQ1NDUsInByb2ZpbGVJZCI6IjE5MjUyMWI0ZWZkYjQyNWM4OTMxZjAyYTg0OTZlMTFiIiwicHJvZmlsZU5hbWUiOiJTZXJpYWxpemFibGUiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2FlYWRiMWFmNGFhYzE1OTNiOWI5OTMzY2M4MzMzZTZmZDZkN2U0MDBlOWIzYmNmZTNiZjAyODc3MWQwMzRmYzkifX19"
+
+  PILLAGER:
+    Change: 0.001
+    DisplayName: "&d&l掠夺者"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0aW1lc3RhbXAiOjE1NTYyODQwMzYwNjAsInByb2ZpbGVJZCI6IjVkODgxNDRhMzhjYzRkZWVhODA3MzYwODc2YzIxYzU4IiwicHJvZmlsZU5hbWUiOiJSZW1WTiIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjM1NTBmODlhZWE4ODY2NTgwNGMyZmQxYjY2ODI5MzBjMjMyMzMxODRmZGMwNjA5OTEzMDU3MThlZDY2MDU5NyJ9fX0="
+
+  TRADER_LLAMA:
+    Change: 0.001
+    DisplayName: "&d&l行商羊驼"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: " eyJ0aW1lc3RhbXAiOjE1NTc2MDA0NDkyNTYsInByb2ZpbGVJZCI6IjM4NjcwNTM3MmZjNDQwNDNiMGQwYTNjOWU1MWRlOWJiIiwicHJvZmlsZU5hbWUiOiJFbnRpdHlMbGFtYVNwaXQiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzQ5YmM0ODY4MWFjODA2M2ZjNjJkNDg0MzE5NDM1NjMzZTRjMDJlZGE1MzAwZTA3Zjg0MmYxNjVhY2FmM2FhOTIifX19"
+
+  # 1.15
+  BEE:
+    Change: 0.001
+    DisplayName: "&d&l蜜蜂"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0aW1lc3RhbXAiOjE1NzU3NDU5MTk5MTQsInByb2ZpbGVJZCI6IjgyYzYwNmM1YzY1MjRiNzk4YjkxYTEyZDNhNjE2OTc3IiwicHJvZmlsZU5hbWUiOiJOb3ROb3RvcmlvdXNOZW1vIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8xNTI0ODIzZTg2YjYyNWZhNzYxY2E3ZjgwZDA4ODQzODE4MTM2ZWRjYzE3MmI2MjgwNDdiYWIzNTkyMDgzMDEwIn19fQ=="
+
+  # 1.16
+  PIGLIN:
+    Change: 0.001
+    DisplayName: "&d&l猪灵"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0aW1lc3RhbXAiOjE1ODE4OTU1MTM0MjYsInByb2ZpbGVJZCI6ImVkNTNkZDgxNGY5ZDRhM2NiNGViNjUxZGNiYTc3ZTY2IiwicHJvZmlsZU5hbWUiOiJGb3J5eExPTCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2MwYWQzZGRlYmY4OGNlMzk1M2I1NzcyZmRkMDI4OGI2ZjhlZGQ4YTAwMzFjZWVlZTVjZGNkNTk0NDFmMTNmNyJ9fX0="
+
+  STRIDER:
+    Change: 0.001
+    DisplayName: "&d&l炽足兽"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMThhOWFkZjc4MGVjN2RkNDYyNWM5YzA3NzkwNTJlNmExNWE0NTE4NjY2MjM1MTFlNGM4MmU5NjU1NzE0YjNjMSJ9fX0="
+
+  HOGLIN:
+    Change: 0.001
+    DisplayName: "&d&l疣猪兽"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWJiOWJjMGYwMWRiZDc2MmEwOGQ5ZTc3YzA4MDY5ZWQ3Yzk1MzY0YWEzMGNhMTA3MjIwODU2MWI3MzBlOGQ3NSJ9fX0="
+
+  ZOGLIN:
+    Change: 0.001
+    DisplayName: "&d&l僵尸疣猪兽"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTY3ZTE4NjAyZTAzMDM1YWQ2ODk2N2NlMDkwMjM1ZDg5OTY2NjNmYjllYTQ3NTc4ZDNhN2ViYmM0MmE1Y2NmOSJ9fX0="
+
+  PIGLIN_BRUTE:
+    Change: 0.001
+    DisplayName: "&d&l猪灵蛮兵"
+    Lore:
+      - ""
+      - "&7斩首时间:&e&l %time%"
+    Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2UzMDBlOTAyNzM0OWM0OTA3NDk3NDM4YmFjMjllM2E0Yzg3YTg0OGM1MGIzNGMyMTI0MjcyN2I1N2Y0ZTFjZiJ9fX0="
+
 Player:
   Change: 0.001
   DisplayName: "&d&l%killed%"

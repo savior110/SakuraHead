@@ -5,6 +5,7 @@ import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -27,13 +28,14 @@ public class EntityListener implements Listener {
     void onEntityDead(EntityDeathEvent event) {
 
         LivingEntity entity = event.getEntity();
-        Player killer = entity.getKiller();
-        EntityType entityType = event.getEntityType();
-        Skull entitySkull = getSkull(entityType);
+        EntityType entityType = entity.getType();
 
-        if (entitySkull == null || killer == null) return;
+        Player killer = entity.getKiller();
+
+        if (killer == null || entityType == EntityType.ARMOR_STAND) return;
 
         double playerChange = plugin.getConfig().getDouble("Player.Change");
+        Skull entitySkull = getSkull(entityType);
 
         if (entityType.equals(EntityType.PLAYER) && playerChange > Math.random()) {
 
@@ -71,7 +73,6 @@ public class EntityListener implements Listener {
             if (entityName == null) return;
 
             Skull skull = getSkull(EntityType.valueOf(entityName));
-            if (skull == null) return;
 
             event.setDropItems(false);
             Location location = event.getBlock().getLocation();
