@@ -1,6 +1,5 @@
 package com.entiv.sakurahead;
 
-import com.entiv.sakurahead.utils.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.configuration.ConfigurationSection;
@@ -60,7 +59,7 @@ public class Main extends JavaPlugin {
         List<String> lore = skullType.getStringList(entityType + ".Lore");
         String value = skullType.getString(entityType + ".Value");
 
-        return new Skull(change, displayName, lore, value);
+        return new Skull(change, displayName, value);
     }
 
     public ConfigurationSection getConfigurationSection() {

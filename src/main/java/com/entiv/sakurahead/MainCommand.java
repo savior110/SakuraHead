@@ -1,6 +1,5 @@
 package com.entiv.sakurahead;
 
-import com.entiv.sakurahead.utils.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

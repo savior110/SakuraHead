@@ -1,4 +1,4 @@
-package com.entiv.sakurahead.utils;
+package com.entiv.sakurahead;
 
 import com.entiv.sakurahead.Main;
 import org.bukkit.Bukkit;

@@ -1,24 +1,15 @@
 package com.entiv.sakurahead;
 
-import com.entiv.sakurahead.utils.Message;
-import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
-
-import java.util.Collection;
-import java.util.List;
 
 public class EntityListener implements Listener {
 
@@ -44,54 +35,13 @@ public class EntityListener implements Listener {
         } else if (entitySkull.getChange() >= Math.random()) {
 
             ItemStack skull = entitySkull.getItemStack();
-            event.getDrops().add(skull);
+            Location location = entity.getLocation();
+            location.getWorld().dropItem(location, skull);
 
             String dropMobHead = plugin.getConfig().getString("Message.DropMobHead");
 
             plugin.getServer().broadcastMessage(Message.toColor(Message.replace(dropMobHead, "%player%", killer.getName(), "%target%", Message.withoutColor(entitySkull.type))));
         }
-    }
-
-    @EventHandler(priority = EventPriority.HIGH)
-    void onBreakBlock(BlockBreakEvent event) {
-
-        if (event.isCancelled()) return;
-
-        Collection<ItemStack> drops = event.getBlock().getDrops();
-
-        for (ItemStack itemStack : drops) {
-
-            if (!itemStack.getType().equals(Material.PLAYER_HEAD)) continue;
-
-            NBTItem nbtItem = new NBTItem(itemStack);
-            String value = nbtItem.getCompound("SkullOwner").getCompound("Properties").getCompoundList("textures").get(0).getString("Value");
-
-            if (value == null) continue;
-
-            String entityName = getEntityName(value);
-
-            if (entityName == null) return;
-
-            Skull skull = Main.getInstance().getSkull(EntityType.valueOf(entityName));
-
-            event.setDropItems(false);
-            Location location = event.getBlock().getLocation();
-
-            ItemStack skullItemStack = skull.getItemStack();
-            location.getWorld().dropItem(location, skullItemStack);
-        }
-    }
-
-    private String getEntityName(String value) {
-        ConfigurationSection section = plugin.getConfig().getConfigurationSection("SkullType");
-        if (section == null) return null;
-
-        for (String entityName : section.getKeys(false)) {
-
-            String configValue = section.getString(entityName.concat(".Value"));
-            if (value.equals(configValue)) return entityName;
-        }
-        return null;
     }
 
     private void givePlayerSkull(Player killer, Player killed) {

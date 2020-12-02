@@ -22,6 +22,7 @@ allprojects {
 dependencies {
     compileOnly 'com.destroystokyo.paper:paper-api:1.16.4-R0.1-SNAPSHOT'
     compile 'de.tr7zw:item-nbt-api-plugin:2.6.0'
+    compile fileTree(dir: 'C:\\Users\\EnTIv\\Desktop\\minecraft\\server\\arclight-1.16.4', includes: ['minecraft_server.1.16.4.jar'])
 }
 
 [compileJava,compileTestJava]*.options*.encoding = 'UTF-8'

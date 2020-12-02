@@ -1,41 +1,25 @@
 package com.entiv.sakurahead;
 
-import com.entiv.sakurahead.utils.ItemBuilder;
-import com.entiv.sakurahead.utils.Message;
-import de.tr7zw.nbtapi.NBTCompound;
-import de.tr7zw.nbtapi.NBTItem;
-import de.tr7zw.nbtapi.NBTListCompound;
+import com.mojang.authlib.GameProfile;
+import com.mojang.authlib.properties.Property;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.SkullMeta;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.UUID;
 
 class Skull {
 
-    String type;
-    final String displayName;
-
     final String texturesValue;
-
     final double change;
+    String type;
 
-    final List<String> lore;
+    Skull(double change, String type, String texturesValue) {
 
-    private final Date data = new Date();
-
-    private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
-    Skull(double change, String type, List<String> lore, String texturesValue) {
-
-        lore.replaceAll(s -> s.replace("%time%", simpleDateFormat.format(this.data)));
-
-        this.lore = lore;
         this.type = type;
 
-        this.displayName = Message.toColor(type + "的头");
         this.texturesValue = texturesValue;
         this.change = change;
     }
@@ -43,21 +27,25 @@ class Skull {
     double getChange() {
         return this.change;
     }
-
     ItemStack getItemStack() {
-
         ItemStack head = new ItemStack(Material.PLAYER_HEAD, 1);
-        NBTItem nbtItem = new NBTItem(head);
 
-        NBTCompound skull = nbtItem.addCompound("SkullOwner");
-        skull.setString("Id", String.valueOf(UUID.randomUUID()));
 
-        NBTListCompound texture = skull.addCompound("Properties").getCompoundList("textures").addCompound();
-        texture.setString("Value", texturesValue);
+        SkullMeta skullMeta = (SkullMeta) head.getItemMeta();
+        GameProfile profile = new GameProfile(UUID.randomUUID(), null);
 
-        ItemStack itemStack = nbtItem.getItem();
+        profile.getProperties().put("textures", new Property("textures", texturesValue));
 
-        return new ItemBuilder(itemStack).name(displayName).lore(lore).build();
+        try {
+            Method mtd = skullMeta.getClass().getDeclaredMethod("setProfile", GameProfile.class);
+            mtd.setAccessible(true);
+            mtd.invoke(skullMeta, profile);
+        } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException ex) {
+            ex.printStackTrace();
+        }
+
+        head.setItemMeta(skullMeta);
+        return head;
     }
 }
 
