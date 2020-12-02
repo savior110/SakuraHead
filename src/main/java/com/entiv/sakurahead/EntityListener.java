@@ -23,7 +23,7 @@ public class EntityListener implements Listener {
 
         Player killer = entity.getKiller();
 
-        if (killer == null || entityType == EntityType.ARMOR_STAND) return;
+        if (killer == null || entityType == EntityType.ARMOR_STAND || killer.getName().contains("[")) return;
 
         double playerChange = plugin.getConfig().getDouble("Player.Change");
         Skull entitySkull = Main.getInstance().getSkull(entityType);
