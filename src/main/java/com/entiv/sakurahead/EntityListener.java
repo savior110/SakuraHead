@@ -26,13 +26,15 @@ public class EntityListener implements Listener {
         if (killer == null || entityType == EntityType.ARMOR_STAND || killer.getName().contains("[")) return;
 
         double playerChange = plugin.getConfig().getDouble("Player.Change");
-        Skull entitySkull = Main.getInstance().getSkull(entityType);
 
         if (entityType.equals(EntityType.PLAYER) && playerChange > Math.random()) {
 
             givePlayerSkull(killer, (Player) entity);
+            return;
+        }
 
-        } else if (entitySkull.getChange() >= Math.random()) {
+        Skull entitySkull = Main.getInstance().getSkull(entityType);
+        if (entitySkull.getChange() >= Math.random()) {
 
             ItemStack skull = entitySkull.getItemStack();
             Location location = entity.getLocation();
