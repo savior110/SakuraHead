@@ -36,10 +36,10 @@ public class MainCommand implements CommandExecutor, TabCompleter {
                     Skull skull = plugin.getSkull(EntityType.valueOf(args[2].toUpperCase()));
                     player.getInventory().addItem(skull.getItemStack());
 
-                    Message.send(sender, "发送成功");
+                    Message.send(sender, "头颅发送成功");
 
                 } catch (ArrayIndexOutOfBoundsException e) {
-                    Message.send(sender, "Message.".concat("参数不足"));
+                    Message.send(sender, "参数不足");
                 } catch (NullPointerException e) {
                     Message.send(sender, "玩家当前不在线");
                 } catch (IllegalArgumentException e) {

@@ -1,6 +1,7 @@
 package com.entiv.sakurahead;
 
 import com.entiv.sakurahead.utils.Message;
+import de.tr7zw.nbtapi.NBTCompound;
 import de.tr7zw.nbtapi.NBTItem;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -67,9 +68,15 @@ public class EntityListener implements Listener {
             if (!itemStack.getType().equals(Material.PLAYER_HEAD)) continue;
 
             NBTItem nbtItem = new NBTItem(itemStack);
-            String value = nbtItem.getCompound("SkullOwner").getCompound("Properties").getCompoundList("textures").get(0).getString("Value");
+            NBTCompound skullOwner = nbtItem.getCompound("SkullOwner");
 
-            if (value == null) continue;
+            String value;
+
+            try {
+                value = skullOwner.getCompound("Properties").getCompoundList("textures").get(0).getString("Value");
+            } catch (NullPointerException e) {
+                return;
+            }
 
             String entityName = getEntityName(value);
 
@@ -101,7 +108,7 @@ public class EntityListener implements Listener {
 
         ItemStack itemStack = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta itemMeta = (SkullMeta) itemStack.getItemMeta();
-
+        //TODO 缓存玩家皮肤, 找点开源插件研究下, 用 GameProfile 获取玩家皮肤后用 base64 写入
         itemMeta.setDisplayName(plugin.getConfig().getString("Player.DisplayName").replace("%killed%", killed.getName()));
         itemMeta.setOwningPlayer(killed);
         itemStack.setItemMeta(itemMeta);
